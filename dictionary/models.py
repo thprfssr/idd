@@ -28,10 +28,15 @@ class Lexicon:
         with open(filename, 'r') as f:
             self.database = json.load(f)
 
-    def search(self, lemma):
-        if lemma in self.database:
-            category = self.database[lemma]["category"]
-            definition = self.database[lemma]["definition"]
-            return (category, definition)
-        else:
-            return None
+    def count(self):
+        return len(self.database)
+
+    def search(self, query):
+        matches = Lexicon()
+        for lemma in self.database.keys():
+            category = self.database[lemma]['category']
+            definition = self.database[lemma]['definition']
+            if query in definition or query in lemma:
+                matches.add(lemma, category, definition)
+        return matches
+
