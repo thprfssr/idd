@@ -1,3 +1,7 @@
+:root {
+  --idd-blue: #0e2752;
+}
+
 body {
   padding: 10px;
 }
@@ -42,9 +46,27 @@ img {
 }
 
 #idd-body {
-  height: 1000px;
   max-width: 900px;
-  background-color: pink;
+  background-color: gainsboro;
+  padding: 50px;
+}
+
+b {
+  font-family: serif;
+}
+
+p {
+  font-size: large;
+}
+
+.btn {
+  background-color: #0e2752;
+  color: white;
+}
+
+form {
+  padding: 10px;
+  text-align: center;
 }
 
 #idd-footer {
@@ -52,4 +74,15 @@ img {
   padding: 10px;
   color: white;
   text-align: center;
+}
+
+
+#idd-search-box-div {
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+#idd-dictionary-body {
+  padding: 10px;
+  padding-top: 30px;
 }
