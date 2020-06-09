@@ -1,15 +1,53 @@
 <!doctype HTML>
 <html>
+  {% load static %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Institutom Danetiskas Danvas</title>
 
+    <!-- Stylesheet -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+    <!-- Point to the Trajan font stored in the `static` directory -->
+    <style>
+      @font-face {
+        font-family: trajan;
+        src: url({% static 'fonts/TrajanPro-Regular.ttf' %});
+      }
+    </style>
+
     <!-- Bootstrap -->
-    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   </head>
   <body>
-    Hello World!
+    <!-- Header -->
+    <div class="container-fluid" id="idd-header">
+      <div class="row align-items-center">
+        <div class="col-sm-2 idd-header-contents"><img src="{% static 'img/logo.svg' %}" alt="Institutom Danetiskas Danvas" id="idd-logo"></div>
+        <div class="col-sm-auto idd-header-contents "><h1 id="idd-header-title">Institutom Danetiskas Danvas</h1></div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="container-fluid" id="idd-navbar">
+      <div class="row">
+        <div class="col-sm-3 idd-nav-item"><h3>Diccionariom</h3></div>
+        <div class="col-sm-3 idd-nav-item"><h3>Grammatica</h3></div>
+        <div class="col-sm-3 idd-nav-item"><h3>Orthographia</h3></div>
+        <div class="col-sm-3 idd-nav-item"><h3>Publicaciones</h3></div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="container" id="idd-body">
+      <h1><b>Detobentói <i>Diccionarioi</i> Institutosjo Danetiskas Danvas.</b></h1>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid" id="idd-footer">
+      <p>&copy; Institutom Danetiskas Danvas, 2020.</p>
+    </div>
   </body>
 </html>
