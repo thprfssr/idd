@@ -1,5 +1,6 @@
 :root {
   --idd-blue: #0e2752;
+  --idd-light-blue: #366ac3;
 }
 
 body {
@@ -47,7 +48,7 @@ img {
 
 #idd-body {
   max-width: 900px;
-  background-color: gainsboro;
+  background-color: white; /*gainsboro;*/
   padding: 50px;
 }
 
@@ -85,4 +86,33 @@ form {
 #idd-dictionary-body {
   padding: 10px;
   padding-top: 30px;
+}
+
+.idd-dictionary-lemma {
+  color: blue;
+}
+
+.idd-dictionary-etymology {
+  background-color: gainsboro;
+  padding: 5px;
+  color: forestgreen;
+}
+
+.idd-dictionary-sense {
+  font-weight: bold;
+  font-size: large;
+}
+
+.idd-dictionary-part-of-speech {
+  color: var(--idd-light-blue);
+}
+
+.idd-dictionary-lemma {
+  font-weight: bold;
+  font-family: serif;
+}
+
+.idd-dictionary-example {
+  font-style: italic;
+  color: darkmagenta;
 }
