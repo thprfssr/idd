@@ -4,12 +4,15 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from dictionary.views import dictionary_entry
+
 def index(request):
-
+    context = None
     if request.GET.get('q'):
-        return HttpResponse("adlfj")
+        #return HttpResponse("adlfj")
+        context = dictionary_entry(request)
 
-    return render(request, 'base.html')
+    return render(request, 'base.html', context)
 
 def search(request):
     query = request.GET['q']
