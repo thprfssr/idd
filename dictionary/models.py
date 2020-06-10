@@ -1,4 +1,13 @@
+from django.db import models
+
 import json
+
+DEFAULT_ETYMOLOGY = 'Apo nevidonná originá.'
+
+# This function takes a string, and converts any square brackets into
+# HTML italic tags.
+def parse_string(s):
+    return s.replace('[', '<i>').replace(']', '</i>')
 
 class Lexicon:
     def __init__(self):

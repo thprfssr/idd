@@ -18,7 +18,7 @@ We could not find any matches.
   <p class="idd-dictionary-etymology">{{ e.etymology|safe }}</p>
   <ol>
   {% for entry in e.entries %}
-    <li class="idd-dictionary-sense"><p style="font-weight: normal;"><span class="idd-dictionary-part-of-speech">{{ entry.category }}.</span> <span>{{ entry.definition }}</span> <span class="idd-dictionary-example">{{ entry.example }}</span></p></li>
+    <li class="idd-dictionary-sense"><p style="font-weight: normal;"><span class="idd-dictionary-part-of-speech">{{ entry.category }}.</span> <span>{{ entry.definition|safe }}.</span> <span class="idd-dictionary-example">{{ entry.example }}</span></p></li>
   {% endfor %}
   </ol>
 </div>

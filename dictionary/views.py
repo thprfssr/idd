@@ -37,13 +37,21 @@ def dictionary_entry(request):
             examples = matches.database[lemma]['examples']
             entries = []
             for i in range(0, len(categories)):
-                entry = {'category': categories[i], 'definition': definitions[i], 'example': examples[i]}
+                category = categories[i]
+                definition = parse_string(definitions[i])
+                example = examples[i]
+                entry = {'category': category, 'definition': definition, 'example': example}
                 entries.append(entry)
             #matches_list.append({'lemma': lemma, 'categories': categories, 'definitions': definitions, 'examples': examples, 'range': range(0, len(categories))})
             match = {'lemma': lemma, 'entries': entries}
-            if 'etymology' in matches.database[lemma].keys():
+            if 'etymology' not in matches.database[lemma].keys():
+                etymology = DEFAULT_ETYMOLOGY
+            elif matches.database[lemma]['etymology'] == '':
+                etymology = DEFAULT_ETYMOLOGY
+            else:
                 etymology = matches.database[lemma]['etymology']
-                match['etymology'] = etymology
+
+            match['etymology'] = parse_string(etymology)
             matches_list.append(match)
 
         context = {'matches': matches_list}
