@@ -32,9 +32,15 @@ def dictionary_entry(request):
 
         matches_list = []
         for lemma in sorted(matches.database.keys()):
-            category = matches.database[lemma]['category']
-            definition = matches.database[lemma]['definition']
-            matches_list.append({'lemma': lemma, 'category': category, 'definition': definition})
+            categories = matches.database[lemma]['categories']
+            definitions = matches.database[lemma]['definitions']
+            examples = matches.database[lemma]['examples']
+            entries = []
+            for i in range(0, len(categories)):
+                entry = {'category': categories[i], 'definition': definitions[i], 'example': examples[i]}
+                entries.append(entry)
+            #matches_list.append({'lemma': lemma, 'categories': categories, 'definitions': definitions, 'examples': examples, 'range': range(0, len(categories))})
+            matches_list.append({'lemma': lemma, 'entries': entries})
 
         context = {'matches': matches_list}
 

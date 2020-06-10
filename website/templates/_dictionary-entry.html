@@ -1,3 +1,4 @@
+<!--
 {% for e in matches %}
 <div class="idd-dictionary-entry">
   <h3 class="idd-dictionary-lemma">{{ e.lemma }}</h3>
@@ -8,4 +9,19 @@
 </div>
 {% empty %}
 We could not find any matches.
+{% endfor %}
+-->
+
+{% for e in matches %}
+<div class="idd-dictionary-entry">
+  <h3 class="idd-dictionary-lemma">{{ e.lemma }}</h3>
+  <p class="idd-dictionary-etymology">{{ e.etymology }}</p>
+  <ol>
+  {% for entry in e.entries %}
+    <li class="idd-dictionary-sense"><p style="font-weight: normal;"><span class="idd-dictionary-part-of-speech">{{ entry.category }}.</span> <span>{{ entry.definition }}</span> <span class="idd-dictionary-example">{{ entry.example }}</span></p></li>
+  {% endfor %}
+  </ol>
+</div>
+{% empty %}
+<p style="color: red;">Ana vosjí dofedjemení nepom ne sagonnom!</p>
 {% endfor %}
