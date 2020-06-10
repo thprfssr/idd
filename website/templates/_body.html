@@ -10,13 +10,14 @@
   </div>
   
   <div id="idd-dictionary-body">
+{% if not has_searched %}
   <p>Tod diccionariom epirefoti normam danetiskas danfuas peri lexikosjo. Sote,
   sagite standardam gerfetim donféi 1000 lexicographicóm articulóm i suvam
   angliskam peduketim, tosom som importantam informacionam peri grammatiskóm
   proprietatóm, synonymóm¸ antonymóm, etymologias, i alja data brukinta do
   correctas bruketies danfuas.</p>
-  </div>
-  
+{% else %}
   {% include '_dictionary-entry.html' %}
-  
+{% endif %}
+  </div>
 </div>

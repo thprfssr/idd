@@ -11,6 +11,7 @@ def index(request):
     if request.GET.get('q'):
         #return HttpResponse("adlfj")
         context = dictionary_entry(request)
+        context['has_searched'] = True
 
     return render(request, 'base.html', context)
 
