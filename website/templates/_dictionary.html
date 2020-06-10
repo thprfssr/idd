@@ -1,0 +1,25 @@
+{% include '_dictionary-search-box.html' %}
+<div id="idd-dictionary-body">
+  
+{% if not has_searched %}
+  <p>Tod diccionariom epirefoti normam danetiskas danfuas peri lexikosjo. Sote,
+  sagite standardam gerfetim donféi 1000 lexicographicóm articulóm i suvam
+  angliskam peduketim, tosom som importantam informacionam peri grammatiskóm
+  proprietatóm, synonymóm¸ antonymóm, etymologias, i alja data brukinta do
+  correctas bruketies danfuas.</p>
+{% else %}
+  {% for e in matches %}
+  <div class="idd-dictionary-entry">
+    <h3 class="idd-dictionary-lemma">{{ e.lemma }}</h3>
+    <p class="idd-dictionary-etymology">{{ e.etymology|safe }}</p>
+    <ol>
+    {% for entry in e.entries %}
+      <li class="idd-dictionary-sense"><p style="font-weight: normal;"><span class="idd-dictionary-part-of-speech">{{ entry.category }}.</span> <span>{{ entry.definition|safe }}.</span> <span class="idd-dictionary-example">{{ entry.example }}</span></p></li>
+    {% endfor %}
+    </ol>
+  </div>
+  {% empty %}
+    <p style="color: red;">Ana vosjí dofedjemení nepom ne sagonnom!</p>
+  {% endfor %}
+{% endif %}
+</div>

@@ -50,6 +50,8 @@ img {
   max-width: 900px;
   background-color: white; /*gainsboro;*/
   padding: 50px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
 }
 
 b {

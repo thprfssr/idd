@@ -1,29 +1,27 @@
 <!-- Body -->
 <div class="container" id="idd-body">
-  <div>
-  <h2>The Danetian Language</h2>
-  <p>Danetian is a constructed language belonging to the Indo-European family. It was created by Javier Castro beginning in the summer of 2017, originally intended to be his own personal classical language. However, the project has evolved over the years, so that it now feels like a typical modern European language.</p>
-  <p>The majority of the lexicon is directly inherited from Proto-Indo-European in the natural development of the language. However, there is also a large number of borrowings from Latin and from Proto-Germanic, and a bit from the Turkic languages.</p>
-  <p>As is expected from an Indo-European language, nouns in Danetian inflect according to case. In fact, the language has preserved seven of the eight cases from Proto-Indo-European. Moreover, the language has developed an extensive yet simple system of verbal inflection. Therefore, Danetian undoubtedly finds itself in the company of other synthetic languages.</p>
-  <p>In this website, you will find everything there is to know about Danetian, from its lively inflectional morphology to its unique syntactic constructions.</p>
-  </div>
-  
-  <div class="container-fluid" id="idd-search-box-div">
-    <form class="form-inline" method="get" action="/diccionariom/">
-      <input class="form-control" type="text" placeholder="Gerfete sote verfom" name="q" value="{{ current_search }}">
-      <button class="btn btn-rounded btn-md" type="submit">Sagotí</button>
-    </form>
-  </div>
-  
-  <div id="idd-dictionary-body">
-{% if not has_searched %}
-  <p>Tod diccionariom epirefoti normam danetiskas danfuas peri lexikosjo. Sote,
-  sagite standardam gerfetim donféi 1000 lexicographicóm articulóm i suvam
-  angliskam peduketim, tosom som importantam informacionam peri grammatiskóm
-  proprietatóm, synonymóm¸ antonymóm, etymologias, i alja data brukinta do
-  correctas bruketies danfuas.</p>
-{% else %}
-  {% include '_dictionary-entry.html' %}
-{% endif %}
+  <div class="row">
+    <div class="col-sm-8">
+      
+{% include page %}
+      
+    </div>
+    <div class="col-sm-4"><p>alfjaafkafkl  kfs
+      gj sg lsj ljskl lksjlkjlk jsjg kls slkjk jl
+      k ajfkjfalf lkalf j aefjaf alfnalfweanf jelfj a
+      adkfj alejf klajjef al  kaj eklaje kljlka a 
+       llk jklajkl ja jklj klj klj klweaklf jajekl ja
+       laef aj al jkj kljael jfl jaj ak f klf jawe
+        lajfeja jlkej kljae jklejf klajef jaje klajfj a
+      ef alk jaelf jaejf laje jfaej lfja jajefja ejafk fajfl 
+      a peaj klajef ja jlajek fjaljefaje jaf 
+      afe jklaej la jkelje kljekl jeklaj  
+      alef klaejf ajef jklawef wej fklawejkl fjak
+        alejfaja fje klajfk ae klfjklefaj kle
+      a lekf aefj kaef jaefj klawejfaejf aewf lanf 
+      aef klajf aj jaewkljfkaj fjaefj a
+      alef jkafjzjfdaj klajfjafj klaejf jawefk aewfkla
+      alefjklajefja a kjaef jkaejkl ja jlk</p>
+    {% include '_dictionary-search-box.html' %}</div>
   </div>
 </div>
