@@ -8,6 +8,7 @@
   proprietatóm, synonymóm¸ antonymóm, etymologias, i alja data brukinta do
   correctas bruketies danfuas.</p>
 {% else %}
+  <hr>
   {% for e in matches %}
   <div class="idd-dictionary-entry">
     <h3 class="idd-dictionary-lemma">{{ e.lemma }}</h3>
@@ -18,8 +19,10 @@
     {% endfor %}
     </ol>
   </div>
+  <hr>
   {% empty %}
     <p style="color: red;">Ana vosjí dofedjemení nepom ne sagonnom!</p>
+    <hr>
   {% endfor %}
 {% endif %}
 </div>

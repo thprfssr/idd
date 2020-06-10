@@ -5,9 +5,14 @@ import json
 DEFAULT_ETYMOLOGY = 'Apo nevidonná originá.'
 
 # This function takes a string, and converts any square brackets into
-# HTML italic tags.
+# HTML italic tags. Also, `seniská greciská` is replaced with a link to the
+# Wikipedia page for Ancient Greek.
 def parse_string(s):
-    return s.replace('[', '<i>').replace(']', '</i>')
+    s = s.replace('[', '<i>').replace(']', '</i>')
+    s = s.replace('seniská greciská', '<a href="https://en.wikipedia.org/wiki/Ancient_Greek">seniská greciská</a>')
+    s = s.replace('latiniská', '<a href="https://en.wikipedia.org/wiki/Latin">latiniská</a>')
+    s = s.replace('proto-indo-europiská', '<a href="https://en.wikipedia.org/wiki/Proto-Indo-European_language">proto-indo-europiská</a>')
+    return s
 
 class Lexicon:
     def __init__(self):
