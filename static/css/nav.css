@@ -1,0 +1,14 @@
+.idd-navbar {
+  background-color: #0e2752;
+  width: 100%;
+}
+
+.idd-navbar-text {
+  font-size: large;
+  padding: 10px;
+  color: white;
+}
+
+.nav-item:hover {
+  background-color: #366ac3;
+}

@@ -35,7 +35,7 @@ img {
   padding: 10px;
   float: left;
 }
-
+/*
 #idd-navbar {
   background-color: #0e2752;
   color: white;
@@ -45,13 +45,13 @@ img {
 .idd-nav-item:hover {
   background-color: #366ac3;
 }
-
+*/
 #idd-body {
   max-width: 900px;
   background-color: white; /*gainsboro;*/
   padding: 50px;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  border: 1px solid black;
+  border-radius:25px;
 }
 
 b {
